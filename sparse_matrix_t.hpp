@@ -54,9 +54,9 @@ enum {COL_CONF, ROW_CONF};
 
 		ostream& write(ostream& os)
 		{
-			os << m_ << endl;
-			os << n_ << endl;
-			///////// (impresiÃ³n de los elementos dispersos)
+			os << "El numero de filas es: " << m_ << endl;
+			os << "El numero de columnas es: " << n_ << endl;
+			///////// (impresion de los elementos dispersos)
 			return os;
 		}
 			
