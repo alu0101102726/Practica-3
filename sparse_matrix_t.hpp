@@ -1,10 +1,13 @@
 #pragma once
 
 #include <iostream>
+#include <cmath>
 
 #include "template_matrix_t.hpp"
-#include â€œvector_t.hppâ€
-#include â€œpair_t.hppâ€
+#include "vector_t.hpp"
+#include "pair_t.hpp"
+
+
 
 using namespace std;
 
@@ -32,14 +35,14 @@ enum {COL_CONF, ROW_CONF};
 			for(int j=1; j<n_;j++){
 				contador=0;
 				for(int i=1; i<m_; i++){
-					if(M(i,j)!=0){
+					if(Zero(M(i,j), eps){
 						contador++;
 					}
 				}
 				dispersa_[j-1].resize(contador);
 				contador=0;
 				for(int i=1; i<m_;i++){
-					if(M(i,j)!=0){
+					if(Zero(M(i,j), eps)){
 						dispersa_[j-1][contador].set(i,M(i,j));
 						contador++;
 					}
@@ -57,7 +60,8 @@ enum {COL_CONF, ROW_CONF};
 			return os;
 		}
 			
-
-	};
+		bool Zero(double val, double eps){
+			return (fabs(val) < eps);
+		};
 
 }
