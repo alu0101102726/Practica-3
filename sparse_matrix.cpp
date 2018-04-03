@@ -27,3 +27,10 @@ sparse_matrix_t::sparse_matrix_t(const matrix_t& M, double eps, int conf){
 		}
 	}
 }
+	
+~sparse_matrix_t(void){}
+
+bool Zero(double val, double eps){
+	return (fabs(val) < eps);
+}
+	
